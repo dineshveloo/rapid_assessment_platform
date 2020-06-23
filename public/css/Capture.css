@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+#allign{
+  padding-top: 2rem;
+}
+th,td{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.filter {
+  margin-top: -50px;
+}
+.filter .panel-heading .pull-right {
+  margin-top: -13px;
+}
+.filter .filters input[disabled] {
+  background-color: transparent;
+  border: none;
+  cursor: auto;
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+}
+
+#abc {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  /* padding: 20px; */
+  /* padding-top: 1px;
+  padding-bottom: 80px; */
+  padding-right:15rem;
+  /* padding-left: 8rem; */
+}
+#abc1 {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+  
+  
+}
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-md-6{
+  padding-left: 13rem;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.form-control:focus{
+border-color:rgb(216, 133, 174);
+}
+footer {
+
+background-color: rgb(197, 195, 195);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#abc2 {
+
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-30 {
+  float:right;
+  width: 87%;
+  margin-top: 6px;
+}
+.col-40 {
+  float: right;
+  width: 90%;
+  margin-top: 6px;
+
+}
+.col-md-6{
+  padding-left: 13rem;
+}
+.col-sm-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-right: 4rem;
+  padding-left:3rem;
+}
+/* ...................... */
+body{
+  /* background-color:rgb(247, 240, 240); */
+}
+#last{
+padding-left: 33rem;
+}
+#last1{
+padding-left: 30rem;
+}
+#fir{
+color:white;
+
+}
+#sec2{
+color:white;
+
+}
+.classWithPad { margin:10px; padding:10px; }

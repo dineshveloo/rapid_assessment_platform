@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rapid Assessment Tool</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/reference_css.css">
+  <link rel="stylesheet" type="text/css" href="../css/About.css">
+  <link rel="stylesheet" type="text/css" href="../css/Capture.css">
+  <link rel="stylesheet" type="text/css" href="../css/defaultConfigurationDetails.css">
+  <link rel="stylesheet" type="text/css" href="../css/effortEstimation.css">
+  <script src="../js/calculations.js"></script>
+   <script src="../js/CaptureProcess.js"></script>
+  <!-- =======================================================
+  * Template Name: OnePage - v2.0.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      {{!-- <h1 class="logo mr-auto"><img src="mphasis_logo.jpg" width="150"></h1> --}}
+      
+      <nav class="nav-menu d-none d-lg-block">
+        {{!-- <h1 class="logo mr-auto"><img src="mphasis_logo.jpg" width="150"></h1> --}}
+        
+        <ul>
+          <ul>
+        <li><img src="mphasis_logo.jpg" width="150"></li>
+        </ul>
+          
+          <li><a href="/user/Home">Home</a></li>
+          <!--process dicsovery -->
+           <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Process Discovery<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/CaptureProcess"><b>Capture Process</b></a></li>
+              <li><a href="/user/viewProcessList"><b>View Process</b></a></li>
+              <li><a href="/user/approveProcess"><b>Approve Process</b></a></li>
+              <li><a href="/user/list"><b>Process Prioritization</b></a></li>
+              <li><a href="/user/uploadDownload"><b>Upload/Download Process</b></a></li>
+              
+              
+           </ul>
+       </li>
+       <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Process Flow Documentation<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/captureProcessFlow"><b>Capture Process Flow</b></a></li>
+              <li><a href="/user/viewWorkflow"><b>View Process Flow</b></a></li>
+              
+              
+           </ul>
+       </li>
+        <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Business Case & Roadmap<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/listbusiness"><b>Select</b></a></li>
+              <li><a href="/user/viewEffortList"><b>View</b></a></li>
+              
+              
+           </ul>
+       </li>
+          
+          <li class="drop-down"><a href="">Settings</a>
+            <ul>
+              {{!-- <li><a href="#">Drop Down 1</a></li> --}}
+              <li class="drop-down"><a href="#">User Management</a>
+                <ul>
+                   <li><a href="/user/userManagement"><b>User Management Home</b></a></li>
+              <li><a href="/user/register"><b>Create User</b></a></li>
+              <li><a href="/user/userList"><b>View Users</b></a></li>
+              
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Configuration Details</a>
+                <ul>
+                  <li><a href="/user/fetchConfigurationDetails"><b>Automation Anywhere</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails2"><b>UiPath</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails3"><b>Pega Robotics</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails4"><b>Blue Prism</b></a></li>
+             
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+         
+          
+          <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <li> <button type="button" onclick="goBack()" class="btn btn-primary btn-lg">Back</button></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      {{!-- <a href="#services" class="get-started-btn scrollto">Get Started</a> --}}
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Business Case</h1>
+         
+          <br>
+          
+          {{!-- <h2>We are team of talanted designers</h2> --}}
+        </div>
+      </div><br>
+      
+
+     <center><font size="4"><h2>{{viewtitle}}</h2></font></center>
+    
+<form action="/user/addEffort" method="POST">
+<div id="eff" class="heading" align="left">
+<h2><b>Business Case Inputs</b></h2>
+</div>
+<div class="container" style="overflow:auto;">
+<table id="scrollid" class="table table-condensed" border="3" align="center">
+            {{!-- <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Process Type</b></h4></td>
+              <td scope="col"><h4><b>Count</b></h4></td>
+
+   </tr>
+   </thead> --}}
+   <tbody>
+       <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Business Case Id</b></td>
+      <td><input type="text" id="columnbox" name="BI" value="{{BI}}" readonly></td>
+
+   </tr>
+    <tr>
+       <td style="text-align: center; vertical-align: middle;width:10%"><b>Total Number of Selected Processes</b></td>
+      <td style="width:10%"><input type="text" id="columnbox" name="Totalbuss" value="{{Total}}" readonly></td>
+      
+   </tr>
+   <tr hidden>
+       <td style="text-align: center; vertical-align: middle;"><b>Client Name</b></td>
+      <td><input type="text" id="columnbox" name="rx" value="{{rx}}" readonly></td>
+       {{!-- <td name="rx"><div style="overflow:scroll; width:100%">{{rx}}</div></td> --}}
+
+   </tr>
+    <tr hidden>
+       <td style="text-align: center; vertical-align: middle;width:30%"><b>Process Id</b></td>
+      {{!-- <td name="pid"><div style="overflow:scroll; width:100%">{{pid}}</div> --}}
+         <td style="width:100%">
+         <input type="text" id="columnbox" name="pid" value="{{pid}}" readonly>
+         </td>
+
+   </tr>
+    
+
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Tool Selected</b></td>
+      <td><input type="text" id="columnbox" name="rpatool" value="{{rpatool}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Project Duration</b></td>
+      <td><input type="text" id="columnbox" name="pd" value="{{pd}}" readonly></td>
+      
+   </tr>
+      {{!-- <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Total</b></td>
+      <td style="font-weight: bold"><input type="text" id="columnbox" name="Total" value="{{Total}}" readonly></td>
+      
+   </tr> --}}
+   </tbody>
+</table>
+</div> 
+
+
+
+<div id="eff" class="heading" align="left">
+<h2><b>Automation Scope</b></h2>
+</div>
+<div class="container">
+<table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Process Type</b></h4></td>
+              <td scope="col"><h4><b>Count</b></h4></td>
+
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Simple</b></td>
+      <td><input type="text" id="columnbox" name="Simple" value="{{Simple}}" readonly></td>
+
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Medium</b></td>
+      <td><input type="text" id="columnbox" name="Medium" value="{{Medium}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Complex</b></td>
+      <td><input type="text" id="columnbox" name="Complex" value="{{Complex}}" readonly></td>
+      
+   </tr>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Total</b></td>
+      <td style="font-weight: bold"><input type="text" id="columnbox" name="Total" value="{{Total}}" readonly></td>
+      
+   </tr>
+   </tbody>
+</table>
+</div> <br><br><br><br>
+
+  <div id="eff" align="left">
+<h2><b>Effort Estimation</b><font size="3"><b> (person months)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Classification</b></h4></td>
+              <td scope="col"><h4><b>Developer</b></h4></td>
+              <td scope="col"><h4><b>Sr Developer</b></h4></td>
+              <td scope="col"><h4><b>BA</b></h4></td>
+              <td scope="col"><h4><b>Architect</b></h4></td>
+              <td scope="col"><h4><b>PM</b></h4></td>
+              <td scope="col"><h4><b>DM</b></h4></td>
+              <td scope="col"><h4><b>Total</b></h4></td>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Simple</b></td>
+      <td><input type="text" name="Simple_Dev_Effort" value="{{Simple_Dev_Effort}}" readonly></td>
+      <td><input type="text"  name="Simple_Srdev_Effort" value="{{Simple_Srdev_Effort}}" readonly></td>
+      <td><input type="text" name="Simple_BA_Effort" value="{{Simple_BA_Effort}}" readonly></td>
+      <td><input type="text" name="Simple_Arch_Effort" value="{{Simple_Arch_Effort}}" readonly></td>
+      <td><input type="text" name="Simple_PM_Effort" value="{{Simple_PM_Effort}}" readonly></td>
+      <td><input type="text" name="Simple_DM_Effort" value="{{Simple_DM_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Simple_Effort" value="{{Total_Simple_Effort}}" readonly></td>
+   </tr>
+   
+   <tr>
+      
+       <td style="text-align: center; vertical-align: middle;"><b>Medium</b></td>
+      <td><input type="text" name="Medium_Dev_Effort" value="{{Medium_Dev_Effort}}" readonly></td>
+      <td><input type="text" name="Medium_Srdev_Effort" value="{{Medium_Srdev_Effort}}" readonly></td>
+      <td><input type="text" name="Medium_BA_Effort" value="{{Medium_BA_Effort}}" readonly></td>
+      <td><input type="text" name="Medium_Arch_Effort" value="{{Medium_Arch_Effort}}" readonly></td>
+      <td><input type="text" name="Medium_PM_Effort" value="{{Medium_PM_Effort}}" readonly></td>
+      <td><input type="text" name="Medium_DM_Effort" value="{{Medium_DM_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Medium_Effort" value="{{Total_Medium_Effort}}" readonly></td>
+   </tr>
+   
+   <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>Complex</b></td>
+      <td><input type="text" name="Complex_Dev_Effort" value="{{Complex_Dev_Effort}}" readonly></td>
+      <td><input type="text" name="Complex_Srdev_Effort" value="{{Complex_Srdev_Effort}}" readonly></td>
+      <td><input type="text" name="Complex_BA_Effort" value="{{Complex_BA_Effort}}" readonly></td>
+      <td><input type="text" name="Complex_Arch_Effort" value="{{Complex_Arch_Effort}}" readonly></td>
+      <td><input type="text" name="Complex_PM_Effort" value="{{Complex_PM_Effort}}" readonly></td>
+      <td><input type="text" name="Complex_DM_Effort" value="{{Complex_DM_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Complex_Effort" value="{{Total_Complex_Effort}}" readonly></td>
+   </tr>
+   
+   <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>Total</b></td>
+      <td style="font-weight: bold" ><input type="text" name="Total_Dev_Effort" value="{{Total_Dev_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Srdev_Effort" value="{{Total_Srdev_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_BA_Effort" value="{{Total_BA_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Arch_Effort" value="{{Total_Arch_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_PM_Effort" value="{{Total_PM_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_DM_Effort" value="{{Total_DM_Effort}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Of_Total_Effort" value="{{Total_Of_Total_Effort}}" readonly></td>
+   </tr>
+   </tbody>
+</table>
+      </div><br>
+      
+      
+ 
+     <div id="ef" align="left" class="heading">
+<h2><b>Staffing Plan</b><font size="3"> <b>(loading for the duration of the project)</b></font></h2> 
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+             <td scope="col"><h4><b>Developer</b></h4></td>
+              <td scope="col"><h4><b>Sr Developer</b></h4></td>
+              <td scope="col"><h4><b>BA</b></h4></td>
+              <td scope="col"><h4><b>Architect</b></h4></td>
+              <td scope="col"><h4><b>PM</b></h4></td>
+              <td scope="col"><h4><b>DM</b></h4></td>
+              
+   </thead>
+   <tbody>
+      <tr>
+      <td><input type="text" name="Dev_Roundoff" value="{{Dev_Roundoff}}" readonly></td> 
+      <td><input type="text" name="Srdev_Roundoff" value="{{Srdev_Roundoff}}" readonly></td>
+      <td><input type="text"  name="BA_Roundoff" value="{{BA_Roundoff}}" readonly></td>
+      <td><input type="text" name="Arch_Roundoff" value="{{Arch_Roundoff}}" readonly></td>
+      <td><input type="text" name="PM_Roundoff" value="{{PM_Roundoff}}" readonly></td>
+      <td><input type="text" name="DM_Roundoff" value="{{DM_Roundoff}}" readonly></td>
+     
+   </tr>
+   
+   </tbody>
+</table>
+      </div><br>
+    
+     <div id="eff" class="heading" align="left">
+<h2><b>Implementation cost</b><font size="3"> <b>(in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Role</b></h4></td>
+              <td scope="col"><h4><b> Effort</b><font size="2"> <b>(man months)</b></font></h4></td>
+              <td scope="col"><h4><b>Cost</b></h4></td>
+              
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Developer</b></td>
+       <td><input type="text" name="Total_Dev_Effort1" value="{{Total_Dev_Effort}}" readonly></td>
+      <td><input type="text" name="Dev_Cost" value="{{Dev_Cost}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Sr.Developer</b></td>
+       <td><input type="text" name="Total_Srdev_Effort1" value="{{Total_Srdev_Effort}}" readonly></td>
+      <td><input type="text" name="Srdev_Cost" value="{{Srdev_Cost}}" readonly></td>
+      
+   </tr>
+   
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>BA</b></td>
+       <td><input type="text" name="Total_BA_Effort1" value="{{Total_BA_Effort}}" readonly></td>
+      <td><input type="text" name="BA_Cost" value="{{BA_Cost}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Architect</b></td>
+       <td><input type="text" name="Total_Arch_Effort1" value="{{Total_Arch_Effort}}" readonly></td>
+      <td><input type="text" name="Arch_Cost" value="{{Arch_Cost}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>PM</b></td>
+       <td><input type="text" name="Total_PM_Effort1" value="{{Total_PM_Effort}}" readonly></td>
+      <td><input type="text" name="PM_Cost" value="{{PM_Cost}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>DU Lead</b></td>
+       <td><input type="text" name="Total_DM_Effort1" value="{{Total_DM_Effort}}" readonly></td>
+      <td><input type="text" name="DUlead_Cost_" value="{{DUlead_Cost}}" readonly></td>
+      
+   </tr>
+   <tr>
+      <td></td>
+      <td style="text-align: center; vertical-align: middle;"><b>Total</b></td>
+      <td><input type="text" name="Total_Imp_Cost" id="total" value="{{Total_Imp_Cost}}" readonly></td>
+
+</tr>
+  </tbody>
+</table>
+      </div><br>
+     
+ 
+   
+     <div id="ef" class="heading" align="left">
+<h2><b>License cost</b><font size="3"><b> (in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Softwares</b></h4></td>
+              <td scope="col"><h4><b>Count</b></h4></td>
+              <td scope="col"><h4><b>Price</b></h4></td>
+              <td scope="col"><h4><b>Total</b></h4></td>
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Bot Creator</b></td>
+       <td><input type="text" name="Bot_Creator_Count" value="{{Bot_Creator_Count}}" readonly></td>
+      <td><input type="text" name="Bot_Creator_Price" value="{{Bot_Creator_Price}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Bot_Creator_Cost" value="{{Total_Bot_Creator_Cost}}" readonly></td>
+   </tr>
+   
+   <tr><td style="text-align: center; vertical-align: middle;"><b>Bot Runner(Unattended)</b></td>
+      <td><input type="text" name="Botrunner_Unatt_Count" value="{{Botrunner_Unatt_Count}}"readonly></td>
+      <td><input type="text" name="Botrunner_Unatt_Price" value="{{Botrunner_Unatt_Price}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Botrunner_Unatt_Cost" value="{{Total_Botrunner_Unatt_Cost}}" readonly></td>
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Bot Runner(Attended)</b></td>
+      <td><input type="text" name="Botrunner_Att_Count" value="{{Botrunner_Att_Count}}" readonly></td> 
+      <td><input type="text" name="Botrunner_Att_Price" value="{{Botrunner_Att_Price}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Botrunner_Att_Cost" value="{{Total_Botrunner_Att_Cost}}" readonly></td>
+       </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Control Room</b></td>
+      <td><input type="text" name="Controlroom_Count" value="{{Controlroom_Count}}" readonly></td>
+      <td><input type="text" name="Controlroom_Price" value="{{Controlroom_Price}}" readonly></td>
+    <td style="font-weight: bold"><input type="text" name="Total_Controlroom_Cost" value="{{Total_Controlroom_Cost}}" readonly></td>
+   </tr>
+   <tr>
+   <td></td>
+      <td></td>
+      <td style="text-align: center; vertical-align: middle;"><b>Total</b></td>
+      <td><input type="text" name="Totalof_Total_Lisc_Price" id="total" value="{{Totalof_Total_Lisc_Price}}" readonly></td>
+
+</tr>
+  </tbody>
+</table>
+      </div><br>
+      
+     <div id="ef" class="heading" align="left">
+<h2><b>Infrastructure cost</b><font size="3"><b> (in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-sm" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Softwares</b></h4></td>
+              <td scope="col"><h4><b>Count</b></h4></td>
+              <td scope="col"><h4><b>Price</b></h4></td>
+              <td scope="col"><h4><b>Total</b></h4></td>
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>VM</b></td>
+       <td><input type="text" name="VM_Count" value="{{VM_Count}}" readonly></td>
+      <td><input type="text" name="VM_Price" value="{{VM_Price}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_VM_Price" value="{{Total_VM_Price}}" readonly></td>
+</tr>
+ <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Server</b></td>
+      <td><input type="text" name="Server_Count" value="{{Server_Count}}" readonly></td>
+      <td><input type="text" name="Server_Price" value="{{Server_Price}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" name="Total_Server_Price" value="{{Total_Server_Price}}" readonly></td>
+</tr>
+<tr>
+   <td></td>
+      <td></td>
+      <td style="text-align: center; vertical-align: middle;"><b>Total</b></td>
+      <td style="font-weight: bold"><input type="text" name="Totalof_Total_Infra_Price" id="total" value="{{Totalof_Total_Infra_Price}}" readonly></td>
+
+</tr>
+  </tbody>
+</table>
+      </div><br><br><br><br>
+
+
+
+
+       <div id="eff" align="left">
+<h2><b>Savings Forecast</b><font size="3"><b> (in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3">
+            <thead>
+   <tr class="coll">
+              <td scope="col" style="text-align: center; vertical-align: middle;"><h4>(in USD)</h4></td>
+              <td scope="col"><h4><b>Year 1</b></h4></td>
+              <td scope="col"><h4><b>Year 2</b></h4></td>
+              <td scope="col"><h4><b>Year 3</b></h4></td>
+              <td scope="col"><h4><b>Year 4</b></h4></td>
+              <td scope="col"><h4><b>Year 5</b></h4></td>
+              
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Implementation Cost</b></td>
+      <td><input type="text" id="imp1"  name="Total_Imp_Cost1" value="{{Total_Imp_Cost}}" readonly></td>
+      <td><input type="text" id="imp2"  value="0" readonly></td>
+      <td><input type="text" id="imp3"  value="0" readonly></td>
+      <td><input type="text" id="imp4"  value="0" readonly></td>
+      <td><input type="text" id="imp5" value="0" readonly></td>
+      
+   </tr>
+   
+   <tr>
+      
+       <td style="text-align: center; vertical-align: middle;"><b>Automation License Cost</b></td>
+      <td><input type="text" id="lic1"  value="{{Totalof_Total_Lisc_Price}}" readonly></td>
+      <td><input type="text" id="lc2"  value="{{Totalof_Total_Lisc_Price}}" readonly></td>
+      <td><input type="text" id="lc3" value="{{Totalof_Total_Lisc_Price}}" readonly></td>
+      <td><input type="text" id="lc4" value="{{Totalof_Total_Lisc_Price}}" readonly></td>
+      <td><input type="text" id="lc5" value="{{Totalof_Total_Lisc_Price}}" readonly></td>
+      
+   </tr>
+   
+   <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>Infrastructure Cost</b></td>
+      <td><input type="text" id="infc1"  value="{{Totalof_Total_Infra_Price}}" readonly></td>
+      <td><input type="text" id="infc2" value="{{Totalof_Total_Infra_Price}}" readonly></td>
+      <td><input type="text" id="infc3" value="{{Totalof_Total_Infra_Price}}" readonly></td>
+      <td><input type="text" id="infc4" value="{{Totalof_Total_Infra_Price}}" readonly></td>
+      <td><input type="text" id="infc5" value="{{Totalof_Total_Infra_Price}}" readonly></td>
+         </tr>
+   
+   <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>Maintenance Cost</b></td>
+      <td><input type="text" id="mac1" name="Maint_Cost" value="{{Maint_Cost}}" readonly></td>
+      <td><input type="text" id="mc2" value="{{Maint_Cost}}" readonly></td>
+      <td><input type="text" id="mc3" value="{{Maint_Cost}}" readonly></td>
+      <td><input type="text" id="mc4" value="{{Maint_Cost}}" readonly></td>
+      <td><input type="text" id="mc5" value="{{Maint_Cost}}" readonly></td>
+         </tr>
+
+ <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>FTE Savings (count)</b></td>
+      <td><input type="text" id="year1" name="FTE_Savings_Count" value="{{FTE_Savings_Count}}"  readonly></td>
+      <td><input type="text" id="year2"  value="{{FTE_Savings_Count}}"  readonly></td>
+      <td><input type="text" id="year3"  value="{{FTE_Savings_Count}}"  readonly></td>
+      <td><input type="text" id="year4"  value="{{FTE_Savings_Count}}"  readonly></td>
+      <td><input type="text" id="year5"  value="{{FTE_Savings_Count}}"  readonly></td>
+         </tr>
+  <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>FTE Cost</b></td>
+      <td><input type="text" name="FTE_Price" id="y1" value="{{FTE_Price}}" readonly ></td>
+      <td><input type="text"  id="y2" value="{{FTE_Price}}" readonly ></td>
+      <td><input type="text" id="y3" value="{{FTE_Price}}" readonly ></td>
+      <td><input type="text" id="y4" value="{{FTE_Price}}" readonly ></td>
+      <td><input type="text" id="y5" value="{{FTE_Price}}" readonly ></td>
+      
+      
+         </tr>
+
+
+    <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>FTE Savings</b></td>
+      <td><input type="text" id="ftesav1" name="FTE_Savings_USD" value="{{FTE_Savings_USD}}" readonly></td>
+      <td><input type="text" id="ftesav2" value="{{FTE_Savings_USD}}" readonly></td>
+      <td><input type="text" id="ftesav3"  value="{{FTE_Savings_USD}}"readonly></td>
+      <td><input type="text" id="ftesav4" value="{{FTE_Savings_USD}}"readonly></td>
+      <td><input type="text" id="ftesav5" value="{{FTE_Savings_USD}}"readonly></td>
+         </tr>
+
+    <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>Net Savings</b></td>
+      <td style="font-weight: bold"><input type="text" id="nets1" name="Net_Savings" value="{{Net_Savings}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" id="nets2" name="Net_Savings_Two" value="{{Net_Savings_Two}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" id="nets3" value="{{Net_Savings_Two}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" id="nets4" value="{{Net_Savings_Two}}" readonly></td>
+      <td style="font-weight: bold"><input type="text" id="nets5" value="{{Net_Savings_Two}}" readonly></td>
+         </tr>
+
+   </tbody>
+</table>
+</div><br><br><br><br>
+
+
+<div id="eff" align="left">
+<h2 ><b>Bussiness Case Summary</b><font size="3"> <b>(in USD)</b></font></h2>
+</div>
+
+<div class="container">
+     
+        <table class="table table-sm" border="3" align="center">
+           
+   <tbody>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Number of Business Processes in Scope for Automation:</b></td>
+       <td><input type="text" name="Total1" value="{{Total}}" readonly></td>
+     </tr>
+ <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Implementation Cost for BOTs (USD):</b></td>
+      <td><input type="text" name="Total_Imp_Cost_Two_" value="{{Total_Imp_Cost_Two}}" readonly></td>
+      
+</tr>
+<tr>
+       <td style="text-align: center; vertical-align: middle;"><b>The TCO for 5 years to build and run the BOTs (USD):</b></td>
+      <td><input type="text" name="Total_TCO_Two_" value="{{Total_TCO_Two}}" readonly></td>
+      
+</tr>
+<tr>
+       <td style="text-align: center; vertical-align: middle;"><b>The net savings across 5 years (USD):</b></td>
+      <td><input type="text" name="Total_Net_Savings_Two_" value="{{Total_Net_Savings_Two}}" readonly></td>
+      
+</tr>
+
+  </tbody>
+</table>
+      </div>
+       <div align="center">
+         
+      <button  type="submit" class="btn btn-primary btn-lg">Save</button>
+     
+      </div>
+
+</form>
+
+  
+
+    </div>
+  </section><!-- End Hero -->
+
+  
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

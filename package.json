@@ -1,0 +1,28 @@
+{
+  "name": "opportunity_finder",
+  "version": "1.0.0",
+  "description": "\"Opportunity_Finder\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "gojs": "^2.1.15",
+    "google-charts": "^2.0.0",
+    "handlebars": "^4.5.3",
+    "jspdf": "^1.5.3",
+    "jspdf-autotable": "^3.5.3",
+    "lodash.uniqby": "^4.7.0",
+    "mongoose": "^5.8.9",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.2",
+    "xlsx": "^0.15.6"
+  }
+}

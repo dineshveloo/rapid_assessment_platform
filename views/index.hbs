@@ -1,0 +1,62 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapid Assessment Platform</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/loginstyle.css">
+{{!-- <style>
+body {
+ 
+   background-image: url('bg.jpg');
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+}
+</style> --}}
+<style>
+    body{
+    background-image: url('bg.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+    }
+</style>
+</head>
+<body>
+    
+<div id="lf" class="login-form">    
+    <form action="/user/checkUser" method="POST">
+        <div align="center">
+        <img src="mphasis_logo.jpg">
+        </div><br>
+        <div align="center">
+    	<h4 class=""><b>Rapid Assessment Platform</b></h4></div><br>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" name="userName" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name="password" required="required">
+           <font color="red">{{viewtitle}}</font>
+        </div>
+        <div class="form-group small clearfix">
+            <label class="checkbox-inline"><input type="checkbox"> <b>Remember me</b></label>
+            <a href="#" id="fp" class="forgot-link"><b>Forgot Password?</b></a>
+        </div> 
+        <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">              
+    </form>			
+    <div id="signup" class="text-center small">Don't have an account?</div><br>
+    <div align="center" ><button class="btn" id="sign" ><a href="#" id="sp">Sign up</a></button></div>
+</div>
+
+</body>
+</html> 

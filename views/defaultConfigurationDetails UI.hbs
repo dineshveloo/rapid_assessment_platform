@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rapid Assessment Tool</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/reference_css.css">
+  <link rel="stylesheet" type="text/css" href="../css/About.css">
+  <link rel="stylesheet" type="text/css" href="../css/Capture.css">
+  <link rel="stylesheet" type="text/css" href="../css/defaultConfigurationDetails.css">
+  <script src="../js/calculations.js"></script>
+   <script src="../js/CaptureProcess.js"></script>
+  <!-- =======================================================
+  * Template Name: OnePage - v2.0.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      {{!-- <h1 class="logo mr-auto"><img src="mphasis_logo.jpg" width="150"></h1> --}}
+      
+      <nav class="nav-menu d-none d-lg-block">
+        {{!-- <h1 class="logo mr-auto"><img src="mphasis_logo.jpg" width="150"></h1> --}}
+        
+        <ul>
+          <ul>
+        <li><img src="mphasis_logo.jpg" width="150"></li>
+        </ul>
+          
+          <li><a href="/user/Home">Home</a></li>
+          <!--process dicsovery -->
+           <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Process Discovery<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/CaptureProcess"><b>Capture Process</b></a></li>
+              <li><a href="/user/viewProcessList"><b>View Process</b></a></li>
+              <li><a href="/user/approveProcess"><b>Approve Process</b></a></li>
+              <li><a href="/user/list"><b>Process Prioritization</b></a></li>
+              <li><a href="/user/uploadDownload"><b>Upload/Download Process</b></a></li>
+              
+              
+           </ul>
+       </li>
+       <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Process Flow Documentation<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/captureProcessFlow"><b>Capture Process Flow</b></a></li>
+              <li><a href="/user/viewWorkflow"><b>View Process Flow</b></a></li>
+              
+              
+           </ul>
+       </li>
+        <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Business Case & Roadmap<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/listbusiness"><b>Select</b></a></li>
+              <li><a href="/user/viewEffortList"><b>View</b></a></li>
+              
+              
+           </ul>
+       </li>
+          
+          <li class="drop-down"><a href="">Settings</a>
+            <ul>
+              {{!-- <li><a href="#">Drop Down 1</a></li> --}}
+              <li class="drop-down"><a href="#">User Management</a>
+                <ul>
+                   <li><a href="/user/userManagement"><b>User Management Home</b></a></li>
+              <li><a href="/user/register"><b>Create User</b></a></li>
+              <li><a href="/user/userList"><b>View Users</b></a></li>
+              
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Configuration Details</a>
+                <ul>
+                  <li><a href="/user/fetchConfigurationDetails"><b>Automation Anywhere</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails2"><b>UiPath</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails3"><b>Pega Robotics</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails4"><b>Blue Prism</b></a></li>
+             
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+         
+          
+          <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <li> <button type="button" onclick="goBack()" class="btn btn-primary btn-lg">Back</button></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      {{!-- <a href="#services" class="get-started-btn scrollto">Get Started</a> --}}
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Configuration Data</h1>
+          <h2><b>UiPath</b></h2>
+          
+          <br><br><br><br><br><br><br>
+          
+          {{!-- <h2>We are team of talanted designers</h2> --}}
+        </div>
+      </div><br>
+      
+
+     <center><font size="4"><h2>{{viewtitle}}</h2></font></center>
+     <center><font color="red"><h2>{{viewerror}}</h2></font></center>
+<form action="configurationDetailsInputUI">
+<div id="eff" align="left">
+<h2><b>Effort Estimation</b><font size="3"> <b>(person months)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Classification</b></h4></td>
+              <td scope="col"><h4><b>Developer></b></h4></td>
+              <td scope="col"><h4><b>Sr Developer</b></h4></td>
+              <td scope="col"><h4><b>BA</b></h4></td>
+              <td scope="col"><h4><b>Architect</b></h4></td>
+              <td scope="col"><h4><b>PM</b></h4></td>
+              <td scope="col"><h4><b>DM</b></h4></td>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Simple</b></td>
+      <td><input type="text" name="Simple_Dev1" value="{{list.Simple_Dev1}}" readonly></td>
+      <td><input type="text"  name="Simple_Srdev1" value="{{list.Simple_Srdev1}}" readonly></td>
+      <td><input type="text" name="Simple_BA1" value="{{list.Simple_BA1}}" readonly></td>
+      <td><input type="text" name="Simple_Arch1" value="{{list.Simple_Arch1}}" readonly></td>
+      <td><input type="text" name="Simple_PM1" value="{{list.Simple_PM1}}" readonly></td>
+      <td><input type="text" name="Simple_DM1" value="{{list.Simple_DM1}}" readonly></td>
+   </tr>
+   
+   <tr>
+      
+       <td style="text-align: center; vertical-align: middle;"><b>Medium</b></td>
+      <td><input type="text" name="Medium_Dev1" value="{{list.Medium_Dev1}}" readonly></td>
+      <td><input type="text" name="Medium_Srdev1" value="{{list.Medium_Srdev1}}" readonly></td>
+      <td><input type="text" name="Medium_BA1" value="{{list.Medium_BA1}}" readonly></td>
+      <td><input type="text" name="Medium_Arch1" value="{{list.Medium_Arch1}}" readonly></td>
+      <td><input type="text" name="Medium_PM1" value="{{list.Medium_PM1}}" readonly></td>
+      <td><input type="text" name="Medium_DM1" value="{{list.Medium_DM1}}" readonly></td>
+   </tr>
+   
+   <tr>
+       
+       <td style="text-align: center; vertical-align: middle;"><b>Complex</b></td>
+      <td><input type="text" name="Complex_Dev1" value="{{list.Complex_Dev1}}" readonly></td>
+      <td><input type="text" name="Complex_Srdev1" value="{{list.Complex_Srdev1}}" readonly></td>
+      <td><input type="text" name="Complex_BA1" value="{{list.Complex_BA1}}" readonly></td>
+      <td><input type="text" name="Complex_Arch1" value="{{list.Complex_Arch1}}" readonly></td>
+      <td><input type="text" name="Complex_PM1" value="{{list.Complex_PM1}}" readonly></td>
+      <td><input type="text" name="Complex_DM1" value="{{list.Complex_DM1}}" readonly></td>
+   </tr>
+   
+   </tbody>
+</table>
+      </div>
+      
+ 
+     <div id="ef" class="heading" align="left">
+<h2><b>License cost</b><font size="3"> <b>(in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Studio</b></h4></td>
+              <td scope="col"><h4><b>Cost</b></h4></td>
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Bot Creator</b></td>
+      <td><input type="text" name="Bot_Creator_Cost1" value="{{list.Bot_Creator_Cost1}}" readonly></td>
+   </tr>
+   
+   <tr><td style="text-align: center; vertical-align: middle;"><b>Bot Runner(Unattended)</b></td>
+      <td><input type="text" name="Bot_Run_Unatt_Cost1" value="{{list.Bot_Run_Unatt_Cost1}}" readonly></td>
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Bot Runner(Attended)</b></td>
+      <td><input type="text" name="Bot_Run_Att_Cost1" value="{{list.Bot_Run_Att_Cost1}}" readonly></td>
+        </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Control Room</b></td>
+      <td><input type="text" name="Cont_Room_Cost1" value="{{list.Cont_Room_Cost1}}" readonly></td>
+   </tr>
+    <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>VM</b></td>
+      <td><input type="text" name="VM_Cost1" value="{{list.VM_Cost1}}" readonly></td>
+   </tr>
+    <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Server</b></td>
+      <td><input type="text" name="Server_Cost1" value="{{list.Server_Cost1}}" readonly></td>
+   </tr>
+  </tbody>
+</table>
+      </div>
+      <div id="ef" class="heading" align="left">
+<h2><b>Rate Card</b><font size="3"> <b>(per hour in USD)</b></font></h2>
+</div>
+     
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Role</b></h4></td>
+              <td scope="col"><h4><b>Cost</b></h4></td>
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Developer</b></td>
+      <td><input type="text" name="Dev_Cost1" value="{{list.Dev_Cost1}}"></td>
+   </tr>
+   
+   <tr><td style="text-align: center; vertical-align: middle;"><b>Sr.developer</b></td>
+      <td><input type="text" name="Srdev_Cost1" value="{{list.Srdev_Cost1}}"></td>
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>BA</b></td>
+      <td><input type="text" name="BA_Cost1" value="{{list.BA_Cost1}}"></td>  </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Architecht</b></td>
+      <td><input type="text" name="Arch_Cost1" value="{{list.Arch_Cost1}}"></td>
+   </tr>
+    
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>PM</b></td>
+      <td><input type="text" name="PM_Cost1" value="{{list.PM_Cost1}}"></td>
+   </tr>
+   
+   <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>DU Lead</b></td>
+      <td><input type="text" name="DUlead_Cost1" value="{{list.DUlead_Cost1}}"></td>
+   </tr>
+  </tbody>
+</table>
+</div>
+ 
+     <div id="ef" class="heading" align="left">
+<h2><b>Infrastructure cost</b><font size="3"> <b>(in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Studio</b></h4></td>
+              <td scope="col"><h4><b>Cost</b></h4></td>
+  </tr>
+   </thead>
+   <tbody>
+    <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>VM</b></td>
+      <td><input type="text" name="VM_Cost1" value="{{list.VM_Cost1}}" readonly></td>
+   </tr>
+    <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>Server</b></td>
+      <td><input type="text" name="Server_Cost1" value="{{list.Server_Cost1}}" readonly></td>
+   </tr>
+  </tbody>
+</table>
+      </div>
+      <br>
+
+      <div id="ef" class="heading" align="left">
+<h2><b>Other Costs</b><font size="3"> <b>(in USD)</b></font></h2>
+</div>
+<br>
+ <div class="container">
+     
+        <table class="table table-condensed" border="3" align="center">
+            <thead>
+   <tr class="coll">
+              <td scope="col"><h4><b>Cost Component</b></h4></td>
+              <td scope="col"><h4><b>Cost</b></h4></td>
+  </tr>
+   </thead>
+   <tbody>
+    <tr>
+       <td style="text-align: center; vertical-align: middle;"><b>FTE Cost</b></td>
+      <td><input type="text" name="FTE_Cost1" value="{{list.FTE_Cost1}}" readonly></td>
+   </tr>
+    
+  </tbody>
+</table>
+      </div>
+
+
+      <br> 
+      <div align="center">
+      <input type="submit" class="btn btn-primary btn-lg" value="Edit">
+      </div>
+      </form>
+ 
+  
+
+    </div>
+  </section><!-- End Hero -->
+
+  
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+
+  #click{
+    padding-top: 3rem ;
+
+  }
+  .click1{
+    padding-top: 8rem;
+  }
+        #columnbox {
+     width: 100%; 
+     box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+     text-align: center;
+}
+body{
+background-color:rgb(247, 240, 240);
+}
+
+#tl{
+  padding-left:63rem;
+}
+select option {
+    margin: 40px;
+    background:white;
+    color:black; 
+    
+}
+#selectTool{
+  color:rgb(8, 8, 8);
+  background-color: rgb(211, 168, 189);
+}
+
+
+
+

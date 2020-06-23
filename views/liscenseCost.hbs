@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Rapid Assessment Platform</title>  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="JS/fte.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/reference_css.css">
+  <link rel="stylesheet" type="text/css" href="../css/Capture.css">
+  <script src="../js/calculations.js"></script>
+  
+  <style>
+    
+
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+} 
+ input[type=text]:focus {
+   width:100%;
+ }
+
+    
+    
+    #submit{
+      padding-top: 10ch;
+    }
+  </style>
+  
+
+
+
+
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            
+              <img  class="navbar-brand" src="mphasis_logo.jpg">
+            
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/user/Home">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Process Discovery<span class="caret"></span></a>
+                 <ul class="dropdown-menu" role="menu">
+                    <li><a href="/user/captureProcess"><b>Capture Process</b></a></li>
+              <li><a href="/user/viewProcessList"><b>View Process</b></a></li>
+              <li><a href="/user/approveProcess"><b>Approve Process</b></a></li>
+              <li><a href="/user/list"><b>Process Prioritization</b></a></li>
+                    
+                    
+                 </ul>
+             </li>
+                  <li><a href="/user/userManagement">User Management</a></li>
+        <li><a href="/user/About">About</a></li>
+        <li><a href="/user/Contact">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="jumbotron" id="cp">
+        <div class="container text-center" >
+        <h1 id="pc">View Process</h1>
+        <p>View Approved Process Details</p>
+        
+        </div>
+      </div>
+      
+       <div class="text-right">
+             <button  type="button" onclick="goBack()" class="btn btn-success">Back</button>  
+          </div><br><br>
+          <div id="search" align="center">
+        <input type="text" class="fa-fa-search" id="myInput" onkeyup="myFunction()" text-align="center" placeholder="Search Client Name" title="Type in a name"> 
+  <span class="glyphicon glyphicon-search"></span>
+      </div>
+ <center> <font color="red">{{viewtitle}}</font></center>
+<div id="allign">
+  {{!-- <input type="text" name="search" placeholder="Search.."id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> --}}
+  {{!--   <input type="text" name="search" placeholder="Search by client name"  onkeyup="myFunction()" >  --}}
+
+ <form action="">
+    
+    <div class="table-responsive">
+        <table class="table" id="myTable">
+          <thead>
+            <tr>
+              <th scope="col">Selected Process</th>
+              <th scope="col">Complexity</th>
+              <th scope="col">Quadrant</th>
+              <th scope="col">Classification</th>
+              <th scope="col">Liscence Required</th>
+              <th scope="col">Attended or Unattended</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each list}}
+            <tr>
+              <td>{{list}}</td>
+              <td>{{list.Buss_Unit}}</td>
+              <td>{{list.Sub_Buss_Unit}}</td>
+             <td>{{list.Proc_Name}}</td>
+             <td><input type="text"></td>
+             <td> <select  class="form-control" id="indat" name="Inp_Data_Type" required>
+                              <option disabled selected value> -- select an option -- </option>
+                          <option value="Attented">Attented</option>
+                          <option value="Unattented">Unattented</option>
+                         </select></td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      
+      
+    </div>
+    
+<div class="table-responsive">
+     <div align="left">
+<h1>Liscence cost</h1>
+</div>
+<br>
+ <div class="table-responsive">
+     
+        <table align="center">
+            <thead>
+   <tr>
+              <td scope="col"><h3><b>Count</b></h3></td>
+              <td scope="col"><h3><b>Price</b></h3></td>
+              <td scope="col"><h3><b>Total</b></h3></td>
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td>Bot Creator</td>
+      <td><input type="text" name="Bot_Creator_Cost" value="{{lists.Bot_Creator_Cost}}"></td>
+      <td><input type="text" name="Bot_Creator_Cost" ></td>
+   </tr>
+   
+   <tr><td>Bot Runner(Unattended)</td>
+      <td><input type="text" name="Bot_Run_Unatt_Cost" value="{{lists.Bot_Run_Unatt_Cost}}"></td>
+      <td><input type="text" name="Bot_Creator_Cost"></td>
+   </tr>
+   
+   <tr>
+       <td>Bot Runner(Attended)</td>
+      <td><input type="text" name="Bot_Run_Att_Cost"></td> 
+      <td><input type="text" name="Bot_Creator_Cost"></td>
+       </tr>
+   
+   <tr>
+       <td>Control Room</td>
+      <td><input type="text" name="Cont_Room_Cost"></td>
+    <td><input type="text" name="Bot_Creator_Cost"></td>
+   </tr>
+  </tbody>
+</table>
+      </div>
+  <div class="table-responsive">
+     <div align="left">
+<h1>Infrastructure cost</h1>
+</div>
+<br>
+ <div class="table-responsive">
+     
+        <table align="center">
+            <thead>
+   <tr>
+              <td scope="col"><h3><b>Count</b></h3></td>
+              <td scope="col"><h3><b>Price</b></h3></td>
+              <td scope="col"><h3><b>Total</b></h3></td>
+  </tr>
+   </thead>
+   <tbody>
+      <tr>
+       <td>VM</td>
+      <td><input type="text" name="Bot_Creator_Cost"></td>
+      <td><input type="text" name="Bot_Creator_Cost"></td>
+</tr>
+ <tr>
+       <td>Server</td>
+      <td><input type="text" name="Bot_Creator_Cost"></td>
+      <td><input type="text" name="Bot_Creator_Cost"></td>
+</tr>
+  </tbody>
+</table>
+      </div>
+</body>
+</html> 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Rapid Assessment Platform</title>  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="JS/fte.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/reference_css.css">
+  <link rel="stylesheet" type="text/css" href="../css/Capture.css">
+  <link rel="stylesheet" type="text/css" href="../css/Contact.css">
+  <script src="../js/calculations.js"></script>
+  
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            
+              <img  class="navbar-brand" src="mphasis_logo.jpg">
+            
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/user/Home">Home</a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Process Discovery<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/CaptureProcess"><b>Capture Process</b></a></li>
+              <li><a href="/user/viewProcessList"><b>View Process</b></a></li>
+              <li><a href="/user/approveProcess"><b>Approve Process</b></a></li>
+              <li><a href="/user/list"><b>Process Prioritization</b></a></li>
+              <li><a href="/user/uploadDownload"><b>Upload/Download Process</b></a></li>
+              
+              
+           </ul>
+       </li>
+ 
+ <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Process Flow<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/captureProcessFlow"><b>Capture Process Flow</b></a></li>
+              <li><a href="/user/viewWorkflow"><b>View Process Flow</b></a></li>
+              
+              
+           </ul>
+       </li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Business Case & Roadmap<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/listbusiness"><b>Select</b></a></li>
+              <li><a href="/user/viewEffortList"><b>View</b></a></li>
+              
+              
+           </ul>
+       </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Management<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+             <li><a href="/user/userManagement"><b>User Management Home</b></a></li>
+              <li><a href="/user/register"><b>Create User</b></a></li>
+              <li><a href="/user/userList"><b>View Users</b></a></li>
+              
+              
+           </ul>
+       </li>
+        {{!-- <li><a href="/user/userManagement">User Management</a></li> --}}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Configuration Details<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+             <li><a href="/user/fetchConfigurationDetails"><b>Automation Anywhere</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails2"><b>UiPath</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails3"><b>Pega Robotics</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails4"><b>Blue Prism</b></a></li>
+             
+              
+              
+           </ul>
+       </li>
+        <li><a href="/user/About">About</a></li>
+        <li><a href="/user/Contact">Contact</a></li>
+        
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{viewtitle}}</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+        </div>
+      </nav>
+      
+      <div class="jumbotron" id="cp">
+        <div class="container text-center" >
+        <h1 id="pc">Contact Us</h1>
+        <p>Do you have any questions? Please do not hesitate to contact us directly.</p>
+        
+        </div>
+      </div>
+<center><font color="green"><h1>{{viewtitle}}</h1></font></center>
+<div class="text-right">
+          
+          
+                
+             <button type="button" onclick="goBack()" class="btn btn-success">Back</button>  
+        
+          </div>
+          <div id="allign1">
+<div class="container" id="abc2">
+    
+  <form action="/user/addProcess" method="POST">
+  <div class="container">
+    <div class="row">
+
+
+   <div class="col-sm-6">
+        
+      <div class="row" align="center">
+        
+     <h2><b>Renjeev Kolanchery</b></h2>
+     </div>
+     <div class="row" align="center">
+        <h3> Co-Head,Enterprise Automation Tribe</h3>
+        </div>
+        <div class="row" align="center">
+        <h3>SVP,Head Automation COE,Mphasis</h3>
+</div>
+<div class="row" align="center"><h4><span class="glyphicon glyphicon-envelope icon-size"> </span> renjeev.kolanchery@mphasis.com</h3></div>
+<div class="row" align="center"><h4><span class="glyphicon glyphicon-earphone icon-size"></span>   +44 7424 635 245</h3></div>
+    </div>
+   
+    
+    
+    
+    
+    
+      <div class="col-sm-6">
+        
+      <div class="row" align="center">
+        
+     <h2><b>Vivek Jasuja</b></h2>
+     </div>
+     <div class="row" align="center">
+        <h3> Co-Head,Enterprise Automation Tribe</h3>
+        </div>
+        <div class="row" align="center">
+        <h3>SVP,Industry Solutions Group,Mphasis</h3>
+</div>
+<div class="row" align="center"><h4><span class="glyphicon glyphicon-envelope icon-size"> </span> vivek.jasuja@mphasis.com</h3></div>
+<div class="row" align="center"><h4><span class="glyphicon glyphicon-earphone icon-size"></span>  +1 646 670 7190</h3></div>
+    </div>
+   
+   
+    
+   
+   
+</div>
+
+</div>
+</div>
+          
+        
+          
+  </form>
+  </div>
+  <div id="end"> 
+  <footer class="container-fluid text-center">
+      <p>&copy; All Rights Reserved Mphasis Limited 2020</p>
+    </footer> 
+    </div>
+  </body>
+</html> 

@@ -1,0 +1,37 @@
+
+      input[type="text"] {
+     width: 100%; 
+     box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+     text-align: center;
+}
+body{
+
+
+}
+.heading{
+  padding-top: 4rem;
+}
+#total{
+  font-weight: bold
+}
+
+#eff{
+    padding-left:3rem;
+    color: rgb(18, 66, 101);  
+    /* font-family: "Montserrat-Black"; */
+    
+}
+#ef{padding-left:3rem;
+  color: rgb(18, 66, 101);   
+    /* font-family: "Montserrat-Black"; */
+   
+}
+.coll{
+  color:white;
+  background-color:rgb(18, 66, 101); 
+}
+
+
+

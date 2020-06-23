@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rapid Assessment Platform</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/reference_css.css">
+  <link rel="stylesheet" type="text/css" href="../css/About.css">
+  <script src="../js/calculations.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+               </button>
+               <img  class="navbar-brand" src="mphasis_logo.jpg">
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/user/Home">Home</a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Process Discovery<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/CaptureProcess"><b>Capture Process</b></a></li>
+              <li><a href="/user/viewProcessList"><b>View Process</b></a></li>
+              <li><a href="/user/approveProcess"><b>Approve Process</b></a></li>
+              <li><a href="/user/list"><b>Process Prioritization</b></a></li>
+              <li><a href="/user/uploadDownload"><b>Upload/Download Process</b></a></li>
+              
+              
+           </ul>
+       </li>
+ 
+ <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Process Flow<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/captureProcessFlow"><b>Capture Process Flow</b></a></li>
+              <li><a href="/user/viewWorkflow"><b>View Process Flow</b></a></li>
+              
+              
+           </ul>
+       </li>
+
+
+       <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Business Case & Roadmap<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/listbusiness"><b>Select</b></a></li>
+              <li><a href="/user/viewEffortList"><b>View</b></a></li>
+              
+              
+           </ul>
+       </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Management<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+             <li><a href="/user/userManagement"><b>User Management Home</b></a></li>
+              <li><a href="/user/register"><b>Create User</b></a></li>
+              <li><a href="/user/userList"><b>View Users</b></a></li>
+              
+              
+           </ul>
+       </li>
+        {{!-- <li><a href="/user/userManagement">User Management</a></li> --}}
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Configuration Details<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+             <li><a href="/user/fetchConfigurationDetails"><b>Automation Anywhere</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails2"><b>UiPath</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails3"><b>Pega Robotics</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails4"><b>Blue Prism</b></a></li>
+             
+              
+              
+           </ul>
+       </li>
+        <li><a href="/user/About">About</a></li>
+        <li><a href="/user/Contact">Contact</a></li>
+        
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{viewtitle}}</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+        </div>
+    </nav>
+    <div class="jumbotron" id="cp">
+        <div class="container text-center" >
+           <h1 id="pc">About</h1>
+       </div>
+    </div>
+    <div class="text-right">
+        <button type="button" onclick="goBack()" class="btn btn-success">Back</button>  
+    </div>
+    <div id="allign1">
+       <div class="about-section paddingTB60 gray-bg">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <div class="about-title clearfix">
+                      <h1><span>Rapid Assessment Platform</span></h1>
+                      <p class="about-paddingB">“Rapid Assessment Platform” is a web-based toolkit that can be leveraged for remote Automation Assessments. The tool generates recommendations based on response to the assessment questionnaire . Adoption of the Rapid Assessment Platform can help in accelerating the overall automation delivery leading to “Faster Time to Value” </p>
+                   </div>
+                   <div class="row">
+                      <div class="about-title clearfix">
+                         <img src="rapid.png" class="img-responsive1"  align="left"  height="15%">
+                        <p class="about-paddingB"><h4><b>Rapid Process Assessment:</b></h4>
+                         <div class="col-xs-10">
+                           <ul>
+                             <li>
+                               Process assessment questionnaire can be captured online during discovery workshops,This can be performed remotely as well.
+                             </li>
+                           </ul>
+                         </div>  
+                       </p>   
+                    </div>
+                  </div>
+                   <div class="row">
+                     <div class="about-title clearfix">
+                       <img src="process_doc.png"class="img-responsive1"   align="left"  height="15%">
+                       <p class="about-paddingB"><h4><b>Process Documentation:</b></h4>
+                     <div class="col-xs-10">  
+                 
+                      <ul>
+                       <li>Processes flows can be documented along with process related metrics viz. Automation Potential, Cycle Time etc.</li>
+                    <li>We also leverage Optimize.ai,the cognitive tool for process mining.</li>
+                  </ul>
+                  </p>
+                    </div>
+                    </div>
+                   </div>
+
+                    <div class="row">
+                          <div class="about-title clearfix">
+                    <img  src="identify.png" class="img-responsive1"   align="left" height="15%">
+                  <p class="about-paddingB"><h4><b>Opportunity Identification:</b></h4>
+                         <div class="col-xs-10"> 
+                  <ul>
+                    <li>
+                        Recommendation engine for identifying automation opportunities & maximizing ROI.</li></ul></p>
+                    </div>
+                    </div>
+                </div>
+            <div class="row">
+              <img  src="Tracking.png" class="img-responsive1"   align="left"  height="15%">
+            <div class="about-title clearfix">
+                  <p class="about-paddingB"><h4><b>Value Tracking:</b></h4>
+                    <div class="col-xs-10"> 
+                  <ul>
+                    <li>
+                         Dashboards for tracking benefits realization during implementation.</li></ul></p>
+              </div>
+             </div>
+            </div>
+
+
+              </div>
+              </div>
+                    
+                
+    
+    
+          
+            
+    <footer class="container-fluid text-center">
+      <p>&copy; All Rights Reserved Mphasis Limited 2020</p>
+    </footer>    
+          
+     
+          
+          
+  
+  
+  
+</body>
+</html> 

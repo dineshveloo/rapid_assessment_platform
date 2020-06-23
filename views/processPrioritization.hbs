@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <title>Rapid Assessment Tool</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/reference_css.css">
+  <link rel="stylesheet" type="text/css" href="../css/About.css">
+  <link rel="stylesheet" type="text/css" href="../css/Capture.css">
+  <link rel="stylesheet" type="text/css" href="../css/defaultConfigurationDetails.css">
+  <script src="../js/calculations.js"></script>
+   <script src="../js/CaptureProcess.js"></script>
+  <!-- =======================================================
+  * Template Name: OnePage - v2.0.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      {{!-- <h1 class="logo mr-auto"><img src="mphasis_logo.jpg" width="150"></h1> --}}
+      
+      <nav class="nav-menu d-none d-lg-block">
+        {{!-- <h1 class="logo mr-auto"><img src="mphasis_logo.jpg" width="150"></h1> --}}
+        
+        <ul>
+          <ul>
+        <li><img src="mphasis_logo.jpg" width="150"></li>
+        </ul>
+          
+          <li><a href="/user/Home">Home</a></li>
+          <!--process dicsovery -->
+           <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Process Discovery<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/CaptureProcess"><b>Capture Process</b></a></li>
+              <li><a href="/user/viewProcessList"><b>View Process</b></a></li>
+              <li><a href="/user/approveProcess"><b>Approve Process</b></a></li>
+              <li><a href="/user/list"><b>Process Prioritization</b></a></li>
+              <li><a href="/user/uploadDownload"><b>Upload/Download Process</b></a></li>
+              
+              
+           </ul>
+       </li>
+       <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Process Flow Documentation<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/captureProcessFlow"><b>Capture Process Flow</b></a></li>
+              <li><a href="/user/viewWorkflow"><b>View Process Flow</b></a></li>
+              
+              
+           </ul>
+       </li>
+        <li class="dropdown">
+          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Business Case & Roadmap<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+              <li><a href="/user/listbusiness"><b>Select</b></a></li>
+              <li><a href="/user/viewEffortList"><b>View</b></a></li>
+              
+              
+           </ul>
+       </li>
+          
+          <li class="drop-down"><a href="">Settings</a>
+            <ul>
+              {{!-- <li><a href="#">Drop Down 1</a></li> --}}
+              <li class="drop-down"><a href="#">User Management</a>
+                <ul>
+                   <li><a href="/user/userManagement"><b>User Management Home</b></a></li>
+              <li><a href="/user/register"><b>Create User</b></a></li>
+              <li><a href="/user/userList"><b>View Users</b></a></li>
+              
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Configuration Details</a>
+                <ul>
+                  <li><a href="/user/fetchConfigurationDetails"><b>Automation Anywhere</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails2"><b>UiPath</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails3"><b>Pega Robotics</b></a></li>
+              <li><a href="/user/fetchConfigurationDetails4"><b>Blue Prism</b></a></li>
+             
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+         
+          
+          <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <li> <button type="button" onclick="goBack()" class="btn btn-primary btn-lg">Back</button></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      {{!-- <a href="#services" class="get-started-btn scrollto">Get Started</a> --}}
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Process Prioritizaion</h1>
+        <h3>View Data Points for Process Prioritizaion</h3>
+          {{!-- <h2>We are team of talanted designers</h2> --}}
+        </div>
+      </div>
+     
+ 
+ <div class="container" >
+  <div class="row">
+    <div class="col-sm-6"> 
+      <img src="quadrant_view.jpg" class="image-fluid img-thumbnail" alt="Responsive image" style="height:75%%">
+    </div>
+    <div class="col-sm-6"> 
+     
+     <div class="row">
+       <p><b>QUICK WINS:</b> Processes that are very good candidates for automation. 
+         These processes are characterized by high volumes, well defined rules and 
+         simple systems or applications. These should be considered for implementation 
+         in the early stages of automation journey.</p>
+     </div>
+      <br>
+      <br>
+     <div class="row">
+        <p><b>BIG BETS:</b> Processes that offer the highest ROI if automated correctly. 
+          These processes are characterized by high volumes as well as high complexity.
+          These processes should be considered once the organization reaches higher levels 
+          of automation maturity.</p>
+     </div>
+      <br>
+      <br>
+     <div class="row">
+       <p><b>LOW HANGING FRUITS:</b> Processes that should be considered for pilots and PoC 
+         to kickstart automation journey. Typically organizations also chalk out 
+         strategies for CoE setup and Enablement  after the Pilots are completed.</p>
+     </div>
+      <br>
+      <br>
+     <div class="row">
+       <p><b>DEFER :</b> Processes that are very low volume and/or Ad-Hoc in nature leading 
+         to increased implementation complexity. Should not be considered until a 
+         viable business case.</p>
+     </div>
+
+   </div>
+  </div>
+ </div>
+
+<div class="container-fluid bg-3 text-center">  
+
+<div align="center">
+
+{{!-- <div class="row"> --}}
+  {{!-- <div class="col-sm-6"> --}}
+  
+  <form name="formdata" class="form-horizontal someFormClass" id="someDynamicId" action="/user/showTable" method="POST">
+
+<label>Choose a Client:</label><br>
+
+<select name="client_name" style="width: 200px;">
+ <option disabled selected value> -- select an option -- </option>
+ {{#each client_list}} 
+
+  <option>{{this.clientName}}</option>
+
+
+{{/each}}
+ </select><br><br>
+ <button class="btn btn-primary btn-lg" type="submit" name="submit" id="someId">Select</button>
+ </form>
+ </div><br>
+ {{!-- </div> --}}
+  {{!-- <div class="col-sm-6"> 
+  <form action="/user/showTable" method="post">
+
+  <label>Client Name:</label>
+  <input type="text-center"  class="form-control" placeholder="Client Name" maxlength="30" name="Client_Name" value="{{clientname}}" readonly>
+
+                    <a href="/user/list"><b>Do you want to change the client name?</b></a><br><br>
+                    
+
+<label>Choose a Business Unit:</label>
+
+ <select id="second-choice1" name="Business_Unit">
+   <option disabled selected value> -- select an option -- </option>
+   
+   {{#each Business_list}} 
+  <option>{{this.Buss_Unit}}</option>
+  {{/each}}
+</select><br><br>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+ 
+</form>
+
+</div> --}}
+{{!-- </div> --}}
+
+
+{{!-- <div class="row">
+        <div class="col-sm-6">
+      
+        <label>Client Name:</label>
+      
+      
+        <input type="text-center"  class="form-control" placeholder="Client Name" maxlength="30" name="clientName" value="{{client}}" readonly>
+      </div>
+    
+    <div class="col-sm-6">
+    
+        <label for="lname">Business Unit:</label>
+      
+      
+        <input type="text-center" class="form-control"  maxlength="30" placeholder="Business Unit" value="{{businessunit}}" readonly>
+     
+    </div>
+    </div>
+
+
+
+
+</div>
+</div> 
+<div align="center">
+   <a href="/user/list"><b>Do you want to change the client name?</b></a><br>
+</div><br><br><br>
+    --}}
+   
+    <div  class="container">
+        <table class="table table-condensed" border="2" align="center">
+          <thead>
+            <tr  class="coll">
+               <th scope="col"><h4 id="fb"><b>Client Name</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Business Unit</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Process Name</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Process Id</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Monthly Volume</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>AHT(min)</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>FTE</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Automation Potential</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>FTE Benefit</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Implementation Complexity</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Quadrant</b></h4></th>
+              <th scope="col"><h4 id="fb"><b>Ranking</b></h4></th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each client_table}}
+            <tr>
+               <td><h4 id="fb">{{this.clientName}}</h4></td>
+              <td><h4 id="fb">{{this.Buss_Unit}}</h4></td>
+              <td><h4 id="fb">{{this.Proc_Name}}</h4></td>
+              <td><h4 id="fb">{{this.Proc_Id}}</h4></td>
+              <td><h4 id="fb">{{this.Mon_Vol}}</h4></td>
+             <td><h4 id="fb">{{this.AHT}}</h4></td>
+             <td><h4 id="fb">{{this.FTE}}</h4></td>
+             <td><h4 id="fb">{{this.AP_Perc}}</h4></td>
+             <td><h4 id="fb">{{this.FTE_Benefit}}</h4></td>
+             <td><h4 id="fb">{{this.Classification}}</h4></td>
+             <td><h4 id="fb">{{this.Quadrant}}</h4></td>
+             <td><h4 id="fb">{{this.Ranking}}</h4></td>
+            </tr>
+           {{/each}}
+           
+          </tbody>
+        </table>
+      </div> <br>
+       <div align="center"> 
+       <input type="button" class="btn btn-primary btn-lg" value="Download as PDF" 
+            id="btPrint" onclick="createPDF2()" />
+        </div><br><br>
+     
+          
+  
+   
+
+
+    </div>
+  </section><!-- End Hero -->
+
+ 
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+ <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+.jumbotron{
+    background-color:  whitesmoke;
+    color: rgb(18, 66, 101);   
+    font-family: "Montserrat-Black";
+    font-weight: bold; 
+    padding-bottom: 4.5rem;
+}
+
+.img-responsive {
+	filter: grayscale(100%);
+	margin: 0 auto;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.footer {
+      background-color: #f2f2f2;
+}
+
+.col-sm-4 {
+	padding-top: 9rem;
+	padding-bottom: 9rem;
+}
+ .col-sm-6 {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+} 
+ 
+
+.navbar-brand {
+  padding-top: 2px; 
+  padding-left: 2px;
+  padding-bottom: 2px;
+}
+.navbar-brand>img {
+  padding-top: 0.25rem;
+  height: 100%;
+  width: auto;
+  padding-bottom: 0.25rem;
+}
+
+
+
+#myInput{
+   
+    width: 230px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+   -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  } 
+   #myInput:focus {
+     width:50%;
+   }
+   #search{
+    padding-right: 10px;
+   }
+   .navbar-brand1 {
+    padding-top: 2px; 
+    padding-left: 2px;
+    padding-bottom: 2px;
+  }
+  .navbar-brand1>img {
+    padding-top: 0.25rem;
+    height: 10%;
+    width: auto;
+    padding-bottom: 0.25rem;
+  }
+  #left{ 
+    padding-left: 40px;
+    float:left;  
+   
+     
+} 
+
+#right{ 
+    float:left;
+   
+   
+} 
+#left1{ 
+   
+    float:left;  
+   
+     
+} 
+#middle{
+  float:left;
+}
+
+#right1{ 
+    float:right;
+    padding-right: 35px;
+   
+   
+} 
+#middlepfd{
+  padding-left:4rem;
+}
+#fontfam{
+  font-family: initial;
+}
+.outbox{
+  border: none;
+  border-color: transparent;
+  outline: none;
+}

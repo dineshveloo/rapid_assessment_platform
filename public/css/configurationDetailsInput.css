@@ -1,0 +1,8 @@
+input[type="text"] {
+    width: 100%; 
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}/* removing this would make input not to go over cells border, but they would be too short, I want them to fit cells size */
+   table {border-top: 1px solid #110202; border-left: 1px solid #160404;}
+     table td {border-right: 1px solid #021802; border-bottom: 1px solid #020f02;}
