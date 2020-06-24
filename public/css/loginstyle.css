@@ -19,7 +19,9 @@ body {
     color: #434343;
     border-radius: 10px;
     margin-bottom: 15px;
-    background: rgb(230, 210, 213);
+    /* background: rgb(82,156, 253); */
+    background: rgb(92,158, 252);
+    /* background: rgb(230, 210, 213); */
     border: 1px solid #f3f3f3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     padding: 30px;
@@ -29,7 +31,6 @@ body {
     font-size: 22px;
     margin-bottom: 20px;
 }
-
 
 .login-form .form-group {
     margin-bottom: 20px;
@@ -45,12 +46,12 @@ body {
     right: 15px;
 }
 .login-form .btn {
-    background: #4aba70;
+    background: #585858;
     border: none;
     line-height: normal;
 }
 .login-form .btn:hover, .login-form .btn:focus {
-    background: #42ae68;
+    background: #585858;
 }
 .login-form .checkbox-inline {
     float: left;
@@ -69,19 +70,31 @@ body {
 }
 #signup{
     color:white;
-    background-color: black;
+    background-color:#303030;
 }
 #sp{
+    /* color: white; */
     color: white;
+    /* font-weight: bold; */
 }
 #sign{
-background-color: rgba(23, 23, 75, 0.781);
+/* background-color: rgba(23, 23, 75, 0.781); */
+background: #585858;
+
 }
 #fp{
-    color:rgb(13, 112, 13);
+    color:	#303030;
 }
 #lf{
     opacity: 0.9;
+}
+
+.heading{
+    color:#202020;
+}
+
+.checkbox-inline{
+    color:	#303030;
 }
 /* body{
     background-image:url('bg.jpg');
